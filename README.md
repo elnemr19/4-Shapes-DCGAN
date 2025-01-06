@@ -1,7 +1,12 @@
 # GANs Project: Shape Generation
 
+![image](https://github.com/user-attachments/assets/e4f245d9-2768-4b37-818b-fa96d894772b)
+
+
 This project implements a **Generative Adversarial Network (GAN)** to generate grayscale images of geometric shapes **(circle, square, star, and triangle)**. The dataset used is from Kaggle's [Four Shapes Dataset](https://www.kaggle.com/datasets/smeschke/four-shapes).
 
+
+![image](https://github.com/user-attachments/assets/c36bb696-ef61-4039-8a7b-15dc5c831f55)
 
 
 
@@ -19,6 +24,9 @@ This project implements a **Generative Adversarial Network (GAN)** to generate g
 
 6. [Results](https://github.com/elnemr19/4-Shapes-DCGAN/tree/main?tab=readme-ov-file#results)
 
+
+
+
 ## Project Overview
 
 Generative Adversarial Networks (GANs) consist of two models:
@@ -28,6 +36,8 @@ Generative Adversarial Networks (GANs) consist of two models:
 2. **Discriminator:** Differentiates between real and synthetic images.
 
 This project uses Wasserstein GAN with Gradient Penalty (WGAN-GP) to stabilize training and improve the quality of generated shapes.
+
+
 
 
 ## Dataset
@@ -52,7 +62,11 @@ Each image is resized to a uniform size of `56x56` pixels and normalized to the 
 
 3. Resized to the desired image dimensions.
 
+
+
+
 ## Model Architecture
+
 
 **Generator**
 
@@ -80,7 +94,11 @@ The discriminator classifies images as real or fake. It uses:
 
 * Fully connected layer for binary output.
 
+
+
 ## Loss Functions
+
+
 
 **Generator Loss**
 
@@ -100,13 +118,15 @@ Enforces Lipschitz continuity to stabilize training:
 
 ## Training Details
 
+
+
 * **Noise Dimension:** 100
 
 * **Epochs:** 160
 
 * **Batch Size:** 128
 
-* **Optimizers:** Adam with learning rate 1e-4, beta_1=0.5, beta_2=0.9 .
+* **Optimizers:** Adam with learning rate `1e-4`, beta_1 `0.5`, beta_2 `0.9`.
 
 
 
