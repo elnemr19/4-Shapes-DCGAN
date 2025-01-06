@@ -56,29 +56,29 @@ Each image is resized to a uniform size of 56x56 pixels and normalized to the ra
 
 **Generator**
 
- The generator creates synthetic images from random noise. It uses:
+The generator creates synthetic images from random noise. It uses:
 
- Fully connected layers to process input noise and reshape it into an initial feature map.
+* **Fully connected layers** to process input noise and reshape it into an initial feature map.
 
- Transposed convolutions for upsampling the feature map and increasing resolution.
+* **Transposed convolutions** for upsampling the feature map and increasing resolution.
 
- Batch normalization to stabilize training and improve convergence.
+* **Batch normalization** to stabilize training and improve convergence.
 
- LeakyReLU activations for non-linearity.
+* **LeakyReLU activations** for non-linearity.
 
- Tanh activation for the output layer, scaling pixel values to the range [-1, 1].
+* **Tanh activation** for the output layer, scaling pixel values to the range [-1, 1].
 
 **Discriminator**
 
- The discriminator classifies images as real or fake. It uses:
+The discriminator classifies images as real or fake. It uses:
 
- Convolutional layers for feature extraction.
+* Convolutional layers for feature extraction.
 
- LeakyReLU activations.
+* LeakyReLU activations.
 
- Dropout for regularization.
+* Dropout for regularization.
 
- Fully connected layer for binary output.
+* Fully connected layer for binary output.
 
 ## Loss Functions
 
