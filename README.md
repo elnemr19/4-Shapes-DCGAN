@@ -7,17 +7,17 @@ This project implements a Generative Adversarial Network (GAN) to generate grays
 
 ## Table of Contents
 
-1. [Project Overview]()
+1. [Project Overview](https://github.com/elnemr19/4-Shapes-DCGAN/tree/main?tab=readme-ov-file#project-overview)
 
-2. [Dataset]()
+2. [Dataset](https://github.com/elnemr19/4-Shapes-DCGAN/tree/main?tab=readme-ov-file#dataset)
 
-3. [Model Architecture]()
+3. [Model Architecture](https://github.com/elnemr19/4-Shapes-DCGAN/tree/main?tab=readme-ov-file#model-architecture)
 
-4. [Loss Functions]()
+4. [Loss Functions](https://github.com/elnemr19/4-Shapes-DCGAN/tree/main?tab=readme-ov-file#loss-functions)
 
-5. [Training Details]()
+5. [Training Details](https://github.com/elnemr19/4-Shapes-DCGAN/tree/main?tab=readme-ov-file#training-details)
 
-6. [Results]()
+6. [Results](https://github.com/elnemr19/4-Shapes-DCGAN/tree/main?tab=readme-ov-file#results)
 
 ## Project Overview
 
@@ -82,13 +82,45 @@ The discriminator classifies images as real or fake. It uses:
 
 ## Loss Functions
 
+**Generator Loss**
+
+Encourages the generator to produce images that the discriminator classifies as real:
+
+
+**Discriminator Loss**
+
+Penalizes incorrect classifications and incorporates gradient penalty:
+
+
+**Gradient Penalty (GP)**
+
+Enforces Lipschitz continuity to stabilize training:
 
 
 
 ## Training Details
 
+* **Noise Dimension:** 100
 
+* **Epochs:** 160
+
+* **Batch Size:** 128
+
+* **Optimizers:** Adam with learning rate 1e-4, beta_1=0.5, beta_2=0.9 .
+
+
+
+Training loop includes:
+
+1. Generating synthetic images.
+
+2. Calculating discriminator and generator losses.
+
+3. Backpropagating and updating weights.
 
 ## Results
 
+Generated images show clear distinctions between shapes after training for 160 epochs. Below are some sample outputs from the generator:
+
+![image](https://github.com/user-attachments/assets/8f7a0a19-d4ba-47c2-a0b3-727743e60c3f)
 
