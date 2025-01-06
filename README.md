@@ -1,6 +1,6 @@
 # GANs Project: Shape Generation
 
-This project implements a Generative Adversarial Network (GAN) to generate grayscale images of geometric shapes (circle, square, star, and triangle). The dataset used is from Kaggle's Four Shapes Dataset.
+This project implements a **Generative Adversarial Network (GAN)** to generate grayscale images of geometric shapes **(circle, square, star, and triangle)**. The dataset used is from Kaggle's [Four Shapes Dataset](https://www.kaggle.com/datasets/smeschke/four-shapes).
 
 
 
@@ -42,13 +42,13 @@ The dataset contains grayscale images of four shapes:
 
 * Triangle
 
-Each image is resized to a uniform size of 56x56 pixels and normalized to the range [-1, 1] for training.
+Each image is resized to a uniform size of `56x56` pixels and normalized to the range `[-1, 1]` for training.
 
 **Preprocessing Steps:**
 
 1. Images are read in grayscale using OpenCV.
 
-2. Normalized using the formula: img = (img - 127.5) / 127.5.
+2. Normalized using the formula: `img = (img - 127.5) / 127.5`.
 
 3. Resized to the desired image dimensions.
 
@@ -66,7 +66,7 @@ The generator creates synthetic images from random noise. It uses:
 
 * **LeakyReLU activations** for non-linearity.
 
-* **Tanh activation** for the output layer, scaling pixel values to the range [-1, 1].
+* **Tanh activation** for the output layer, scaling pixel values to the range ` [-1, 1] `.
 
 **Discriminator**
 
